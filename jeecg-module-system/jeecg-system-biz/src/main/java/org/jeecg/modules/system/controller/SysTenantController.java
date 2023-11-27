@@ -246,7 +246,7 @@ public class SysTenantController {
      * @return
      */
     @RequestMapping(value = "/queryById", method = RequestMethod.GET)
-    public Result<SysTenant> queryById(@RequestParam(name="id",required=true) String id) {
+    public Result<SysTenant> queryById(@RequestParam(name="id",required=true) Integer id) {
         Result<SysTenant> result = new Result<SysTenant>();
         if(oConvertUtils.isEmpty(id)){
             result.error500("参数为空！");
